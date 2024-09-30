@@ -9,8 +9,8 @@ class Pessoa:
         print (f"Tenho algo pra te falar: {texto}")
 
 
-        #CRIANDO OBJETOS
-        pessoa1 = Pessoa()
-
-        print(pessoa1.nome, pessoa1.idade)
-        pessoa1.falar("Bom  dia, hoje é segunda-feira")
+#CRIANDO OBJETOS
+pessoa1 = Pessoa()#desta forma estamos criando um objeto de tipo pessoa
+ 
+print(pessoa1.nome, pessoa1.idade)
+pessoa1.falar("Bom  dia, hoje é segunda-feira") 
