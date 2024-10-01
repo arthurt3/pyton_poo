@@ -9,4 +9,14 @@ minhaconta.detalhes()
 
 print(f"O limite atual é {minhaconta.getLimite}")
 
+minhaconta.setLimite(259)#alterando o valor do limite
+
+print(f"O limite atual é {minhaconta.getLimite}")
+
+minhaconta.depositar(100)
+minhaconta.detalhes ()
+
+minhaconta.sacar(500)
+minhaconta.detalhes()
+
 

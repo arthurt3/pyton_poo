@@ -1,6 +1,6 @@
 class Conta:
     #Método Construtor
-    def __init__(self,numero, titular, saldo, limite):
+    def __init__(self,numero, titular, saldo, limite = 200):#estamos passando um valor padrão para o limite
         #Quando colocamos 2 underlines ntes do nome do atrbuto indicammos que  ele é privado, o contrário significa  que ele é público
 
 
