@@ -1,0 +1,39 @@
+import sqlite3 #importando uma biblioteca de banco de dados
+
+#Passo 1 - Estabelecendo conexão com o banco
+conexao = sqlite3.connect('departamento.db') #nome do banco de dados, e o arquivo que irá  armazenar o banco de dados
+
+#Passo 2 - Verificar se a tabela existe ou não
+tabela = """
+CREATE TABLE IF NOT EXISTS funcionario (
+    codigo  INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome VARCHAR(100),
+    salario FLOAT,
+    cargo VARCHAR(100)
+
+);"""
+
+#Passo 3 - Acessar objeto da biblioteca sqlite 3 para manipular o banco 
+consulta  = conexao.cursor() # O obejto  cursor é usado para executar SQL commands
+
+#Passo 4 - Executar  o comando de criação da tabela
+consulta.execute(tabela)
+
+#Passo 5 - solicitar dados da tabela 
+sql = "SELECT *  FROM funcionario" # comando SQL para selecionar todos os dados da tabela funcionario
+
+consulta.execute(sql)
+
+#Passo 7 - Exibir  os dados da tabela
+resultado = consulta.fetchall() #irá exibir todos os dados da tabela funcionario
+
+print(resultado)
+
+print("_"*50)
+for itens  in resultado:
+    print(f"Código: {itens[0]}, Nome: {itens[1]}" ) #irá exibir todos os dados da tabela funcionario
+
+#Passo 10 - finalizar conexão 
+conexao.close()
+
+

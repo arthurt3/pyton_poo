@@ -1,11 +1,11 @@
 class Personagem:
     def __init__(self, nome, vida =  5):
 
-        self.nome  = nome
+        self._nome  = nome
         self._vida = vida
     
     def atacar(self):
-        print(f"O {self.nome } está atacando!")
+        print(f"O {self._nome } está atacando!")
     
 
 class  Jogador(Personagem):
@@ -16,10 +16,10 @@ class  Jogador(Personagem):
 
     
     def Informacoes(self):
-        print(f"Nome: {self.nome}, Raça: {self._raca}, Vida: {self._vida}" )
+        print(f"Nome: {self._nome}, Raça: {self._raca}, Vida: {self._vida}" )
 
     def usarHabilidade(self,poder):
-        print(f"O {self.nome} está usando a habilidade {poder}!")
+        print(f"O {self._nome} está usando a habilidade {poder}!")
 
     def coletarItem(self,item):
         self.lista.append(item)
@@ -33,16 +33,16 @@ class Monstro(Personagem):
         self._forca = forca
     
     def exibirInformacoes(self):
-        print(f"Nome: {self.nome}, Tipo: {self._tipo}, Vida: {self._vida}, Força: {self._forca}" )
+        print(f"Nome: {self._nome}, Tipo: {self._tipo}, Vida: {self._vida}, Força: {self._forca}" )
 
     def invocarAliado(self, nomeAliado,  tipoAliado):
-        print(f"{self.nome} está invocando o aliado {nomeAliado} do tipo {tipoAliado}")
+        print(f"{self._nome} está invocando o aliado {nomeAliado} do tipo {tipoAliado}")
 
     def defender (self):
-        print(f"O {self.nome} está defendendo-se!")
+        print(f"O {self._nome} está defendendo-se!")
 
         self._vida -= 1
-        print(f"Vida do {self.nome}: {self._vida}")
+        print(f"Vida do {self._nome}: {self._vida}")
             
 
         
