@@ -25,7 +25,7 @@ salario = float(input("Informe o salário do funcionário: "))
 cargo = input("Informe o cargo do funcionário: ")
 
 #Passo  6 - Criando comando para Inserir dados na tabela
-sql = "INSERT  INTO funcionario  VALUES (?,?,?)"# colocamos ? no lugar do dados reais, para  evitar a injeção de dados de ataques de  sql injection.
+sql = "INSERT  INTO funcionario  VALUES (?,?,?,?)"# colocamos ? no lugar do dados reais, para  evitar a injeção de dados de ataques de  sql injection.
 
 #Passo 7 - Organizar os dados substituídos a ? com os dados reais
 campos = (None, nome, salario, cargo ) #None é usado para o código, pois ele é autoincremento, criando uma tupla  com os dados reais que serão trocados pela ?
